@@ -1,5 +1,7 @@
 ## Plantilla para crear Virtual Machines
 
+### Configura la región y la zona predeterminadas para todos los recursos
+
 Configuar una variable de entorno para establecer la Zona 
 
 ```shell
@@ -13,6 +15,8 @@ Configuar una variable de entorno para establecer la Zona
     gcloud config set compute/zone Zone 
 
 ```
+
+### Crea varias instancias de servidor web
 
 
 Para esta situación de balanceo de cargas, crea instancias de VM de Compute Engine e instala Apache en ellas. Luego, agrega una regla de firewall que permita que el tráfico HTTP llegue a las instancias.

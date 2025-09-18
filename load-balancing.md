@@ -1,6 +1,8 @@
 ## Comandos para crear un Load Balancing
 
 
+### Configura el servicio de balanceo de cargas
+
 Cuando configuras el servicio de balanceo de cargas, tus instancias de máquina virtual reciben paquetes destinados a la dirección IP externa estática que configures. Las instancias creadas con una imagen de Compute Engine se configuran automáticamente para administrar esta dirección IP.
 
 1. Crea una dirección IP externa estática para tu balanceador de cargas:
@@ -17,6 +19,9 @@ Cuando configuras el servicio de balanceo de cargas, tus instancias de máquina 
 
     gcloud compute http-health-checks create basic-check
 ```
+
+### Crea el grupo de destino y la regla de reenvío
+
 
 Un grupo de destino es un grupo de instancias de backend que reciben tráfico entrante de los NLB de transferencia externos. Todas las instancias de backend de un grupo de destino deben estar en la misma región de Google Cloud.
 
@@ -44,6 +49,8 @@ Un grupo de destino es un grupo de instancias de backend que reciben tráfico en
     --address <network-name> \
     --target-pool < pool-name >
 ```
+
+### Envía tráfico a tus instancias
 
 Ahora que está configurado el servicio de balanceo de cargas, puedes comenzar a enviar tráfico a la regla de reenvío y ver cómo se dispersa el tráfico a las diferentes instancias.
 
