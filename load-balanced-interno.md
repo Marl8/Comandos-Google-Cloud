@@ -4,8 +4,8 @@ El balanceador de cargas de aplicaciones interno es esencial para crear aplicaci
 
 Compilarás un patrón de arquitectura simplificado, pero muy común:
 
-    Un "nivel web" (sitio web público) que necesita pedir ayuda a otro servicio interno
-    Un "nivel de servicio interno" (una calculadora de números primos) que realiza tareas específicas y se distribuye en varias máquinas
+- Un "nivel web" (sitio web público) que necesita pedir ayuda a otro servicio interno
+- Un "nivel de servicio interno" (una calculadora de números primos) que realiza tareas específicas y se distribuye en varias máquinas
 
 Esta configuración garantiza que, incluso si una parte de tu servicio interno se ocupa o deja de funcionar, el sistema general siga funcionando sin problemas, ya que el balanceador de cargas dirige automáticamente las solicitudes a las máquinas en buen estado.
 
@@ -48,9 +48,9 @@ Estás creando esa única entrada VIP privada para tu servicio interno que permi
 
 Un balanceador de cargas interno consta de tres partes principales:
 
-    Regla de reenvío: Es la dirección IP privada real a la que otros servicios internos enviarán solicitudes. "Reenvía" el tráfico a tu servicio de backend.
-    Servicio de backend: Define cómo el balanceador de cargas distribuye el tráfico a tus instancias de VM. También incluye la verificación de estado.
-    Verificación de estado: Es una verificación continua que supervisa el "estado" de tus VMs de backend. El balanceador de cargas solo envía tráfico a las máquinas con verificaciones de estado aprobadas, lo que garantiza que tu servicio esté siempre disponible.
+- **Regla de reenvío:** Es la dirección IP privada real a la que otros servicios internos enviarán solicitudes. "Reenvía" el tráfico a tu servicio de backend.
+- **Servicio de backend:** Define cómo el balanceador de cargas distribuye el tráfico a tus instancias de VM. También incluye la verificación de estado.
+- **Verificación de estado:** Es una verificación continua que supervisa el "estado" de tus VMs de backend. El balanceador de cargas solo envía tráfico a las máquinas con verificaciones de estado aprobadas, lo que garantiza que tu servicio esté siempre disponible.
 
 En el siguiente diagrama, se muestra cómo se balancean las cargas de las instancias con varias instancias en varios grupos de backend en diferentes zonas.
 
