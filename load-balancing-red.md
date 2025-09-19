@@ -1,4 +1,7 @@
-## Comandos para crear un Load Balancing
+## Comandos para crear un Load Balancing Capa 4 - Cargas de RED
+
+Como configurar un balanceador de cargas de red (NLB) de transferencia que se ejecute en máquinas virtuales (VMs) de Compute Engine. Un NLB de capa 4 (L4) controla el tráfico según la información a nivel de la red, como las direcciones IP y los números de puerto, y no inspecciona el contenido del tráfico.
+En resumen ***NO*** está diseñado para tráfico HTTP.
 
 
 ### Configura el servicio de balanceo de cargas
