@@ -16,6 +16,19 @@ Configuar una variable de entorno para establecer la Zona
 
 ```
 
+Ejecuta los siguientes comandos de gcloud en la consola de Cloud para establecer la región y la zona predeterminadas:
+
+```shell
+
+    gcloud config set compute/zone "ZONE"
+export ZONE=$(gcloud config get compute/zone)
+
+gcloud config set compute/region "REGION"
+export REGION=$(gcloud config get compute/region)
+
+```
+
+
 ### Crea varias instancias de servidor web
 
 
