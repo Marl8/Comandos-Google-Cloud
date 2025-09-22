@@ -1,4 +1,5 @@
-## Cloud Functions
+## Cloud Functions Run
+
 
 Una función de Cloud Run es un fragmento de código que se ejecuta en respuesta a un evento, como una solicitud HTTP, un mensaje desde un servicio de mensajería o la carga de un archivo. Los eventos de la nube representan todo lo que ocurre en tu entorno de nube. Pueden ser cambios en la información de una base de datos, la adición de archivos a un sistema de almacenamiento o la creación de una nueva instancia de máquina virtual.
 
@@ -35,7 +36,8 @@ Para crear una función de Cloud Run, sigue estos pasos:
 
 ```shell
 
-    mkdir gcf_hello_world && cd $_
+    mkdir < gcf_hello_world && cd $_ >
+
 
 ```
 
@@ -110,15 +112,15 @@ Cloud Run Functions se basa en eventos, lo que significa que se debe especificar
 
 ```shell
 
-    gcloud functions deploy nodejs-pubsub-function \
+    gcloud functions deploy < nodejs-pubsub-function > \
   --gen2 \
-  --runtime=nodejs20 \
+  --runtime=nodejs22 \
   --region=<REGION> \
   --source=. \
   --entry-point=helloPubSub \
   --trigger-topic cf-demo \
-  --stage-bucket PROJECT_ID-bucket \
-  --service-account cloudfunctionsa@PROJECT_ID.iam.gserviceaccount.com \
+  --stage-bucket < PROJECT_ID-bucket > \
+  --service-account < cloudfunctionsa@PROJECT_ID.iam.gserviceaccount.com > \
   --allow-unauthenticated
 
 ```
@@ -169,5 +171,24 @@ Consulta los registros para confirmar que haya mensajes de registro con ese ID d
 Los registros pueden tardar alrededor de 10 min en aparecer. Además, la forma alternativa de ver los registros es en **Logging > Explorador de registros.**
 
 
+***NOTA:***
 
+#### Solucióm rpblema de permisos
 
+Ver todos los permisos:
+
+```shell
+
+gcloud projects describe < Proyecto id >
+
+```
+
+Otorgar permiso:
+
+```shell
+
+gcloud storage buckets add-iam-policy-binding < Nombre del Bucket > \
+--member='serviceAccount:service-< Número del Proyecto >@gcp-sa-eventarc.iam.gserviceaccount.com' \
+--role='roles/storage.objectViewer'
+
+```
