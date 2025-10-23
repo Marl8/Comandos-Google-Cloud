@@ -26,3 +26,9 @@ https://docs.cloud.google.com/compute/docs/instances/connecting-to-windows?hl=es
 
 
 
+#### Cómo trabajar con máquinas virtuales 
+
+Levantar un servidor de Minicraft:
+
+https://www.skills.google/paths/621/course_templates/50/labs/594661?locale=es
+
