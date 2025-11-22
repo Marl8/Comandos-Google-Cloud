@@ -90,7 +90,7 @@ Terraform trata todos los directorios locales a los que se hace referencia en el
 ├── outputs.tf
 ```
 
-    tura de archivos que desees.
+    Nota: Ninguno de estos archivos es obligatorio ni tiene un significado especial para Terraform cuando usa tu módulo. Puedes crear un módulo con un solo archivo .tf o usar cualquier otra estructura de archivos que desees. 
 
 Cada uno de estos archivos cumple un propósito:
 
