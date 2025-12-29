@@ -16,6 +16,6 @@ Esta es la presentaci√≥n principal. Puedes encontrar el contenido detallado aqu√
 * [**Ir a Terraform**](terraform.md)
 * [**Ir a Terraform Modules**](terraform-modules.md)
 * [**Ir a Terraform Estado**](terraform-estado.md)
-
+* [**Ir a Proyecto Final Cloud Security**](lab-final-cloud-security.md)
 
 

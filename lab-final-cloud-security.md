@@ -48,14 +48,12 @@ En la siguiente tabla, se asocian las reglas mencionadas en el informe con su ca
 
 ![Linux](./img/vulnerabilidades.png)
 
-n general, estos hallazgos indican una falta fundamental de controles de seguridad y el incumplimiento de requisitos de PCI DSS esenciales. También apuntan a vulnerabilidades asociadas con la violación de la seguridad de los datos.
+En general, estos hallazgos indican una falta fundamental de controles de seguridad y el incumplimiento de requisitos de PCI DSS esenciales. También apuntan a vulnerabilidades asociadas con la violación de la seguridad de los datos.
 
 A continuación, navega al Security Command Center y filtra los hallazgos para examinar y analizar en profundidad las vulnerabilidades en el entorno de Google Cloud.
 
-    En la consola de Google Cloud, en el menú de navegación (
-
-    ), haz clic en Seguridad > Resultados. Se abre la página Resultados.
-    En el panel Filtros rápidos, en la sección Tipo de recurso, selecciona la casilla de verificación para el tipo de recurso Bucket de Google Cloud Storage.
+En la consola de Google Cloud, en el menú de navegación, haz clic en Seguridad > Resultados. Se abre la página Resultados.
+En el panel Filtros rápidos, en la sección Tipo de recurso, selecciona la casilla de verificación para el tipo de recurso Bucket de Google Cloud Storage.
 
 Deberían aparecer los siguientes hallazgos activos pertenecientes al bucket de almacenamiento:
 
@@ -78,13 +76,14 @@ Deben aparecer los siguientes hallazgos activos que pertenecen a la máquina vir
 
 Estos hallazgos indican que la máquina virtual se configuró de manera que la dejó muy vulnerable al ataque. Para corregirlos, deberás apagar la VM original (cc-app-01) y crear una VM (cc-app-02) usando una instantánea limpia del disco. La nueva VM tendrá la siguiente configuración aplicada:
 
-    Sin cuenta de servicio de procesamiento
-    Etiqueta de regla de firewall para una regla nueva para el acceso SSH controlado
-    Arranque seguro habilitado
-    Dirección IP pública configurada en Ninguna
+- Sin cuenta de servicio de procesamiento
+- Etiqueta de regla de firewall para una regla nueva para el acceso SSH controlado
+- Arranque seguro habilitado
+- Dirección IP pública configurada en Ninguna
 
-    En el campo Intervalo de tiempo, expande el menú desplegable y selecciona Últimos 30 días. Así, garantizarás que la lista incluya los hallazgos de los últimos 30 días.
-    En el panel Filtros rápidos, en la sección Tipo de recurso, desmarca Google compute instance y selecciona la casilla de verificación para el tipo de recurso Google compute firewall.
+En el campo Intervalo de tiempo, expande el menú desplegable y selecciona Últimos 30 días. Así, garantizarás que la lista incluya los hallazgos de los últimos 30 días.
+
+En el panel Filtros rápidos, en la sección Tipo de recurso, desmarca Google compute instance y selecciona la casilla de verificación para el tipo de recurso Google compute firewall.
 
 Los siguientes hallazgos activos deben mencionarse como pertenecientes al firewall:
 
