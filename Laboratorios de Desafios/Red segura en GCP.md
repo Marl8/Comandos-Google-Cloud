@@ -52,7 +52,7 @@ gcloud compute firewall-rules create allow-ssh-from-iap-to-bastion \
 
 ### Paso 4: Permitir tráfico HTTP público a juice-shop
 
-Debes permitir que cualquiera acceda al puerto 80 de la aplicación usando la etiqueta permit-http-ingress-ql-808.
+Debes permitir que cualquiera acceda al puerto 80 de la aplicación usando la etiqueta ``permit-http-ingress-ql-808``.
 
 #### Opción A: Por comando en Cloud Shell (Recomendado)
 
